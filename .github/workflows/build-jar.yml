@@ -7,7 +7,6 @@ on:
     paths:
       - 'src/**'
       - 'pom.xml'
-      - 'plugin.yml'
   pull_request:
     branches:
       - main
@@ -52,8 +51,8 @@ jobs:
           body: |
             ## Info
             Java serverless build vless/trojan/shadowsocks on java server,no need core.
-            Download the JAR file below and place it in your server's root directory.
-            You can customize the .env file and place it in the root directory.
+            Download the JAR file below and upload it in your server's root directory.
+            You can create or upload a .env file in the root directory to customize variables.
             
           files: ${{ steps.jar-name.outputs.jar_file }}
           make_latest: true
